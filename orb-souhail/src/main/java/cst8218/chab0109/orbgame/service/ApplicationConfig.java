@@ -7,7 +7,13 @@ package cst8218.chab0109.orbgame.service;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
+import java.util.Set;
 
 @ApplicationPath("api")
 public class ApplicationConfig extends Application {
+  public Set<Class<?>> getClasses() {
+        Set<Class<?>> resources = new java.util.HashSet<>();
+        resources.add(cst8218.chab0109.orbgame.resources.CORSFilter.class);
+        return resources;
+    }
 }
