@@ -51,7 +51,6 @@
         <web-resource-collection>
             <web-resource-name>REST API</web-resource-name>
             <url-pattern>/resources/*</url-pattern>
-            <http-method-omission>OPTIONS</http-method-omission>
         </web-resource-collection>
         <auth-constraint>
             <role-name>APIGroup</role-name>
