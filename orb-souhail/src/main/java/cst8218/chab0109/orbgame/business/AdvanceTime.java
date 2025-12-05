@@ -25,26 +25,26 @@ public class AdvanceTime {
 
     @Schedule(hour="*", minute="*", second="*", persistent=false)
     public void simulateTimeStep() {
-        System.out.println("=== SCHEDULER STARTED ===");
+       //System.out.println("=== SCHEDULER STARTED ===");
         try {
             List<Orb> orbs = orbFacade.findAll();
-            System.out.println("Found " + orbs.size() + " orbs in database");
+           // System.out.println("Found " + orbs.size() + " orbs in database");
             
             if (orbs.isEmpty()) {
-                System.out.println("No orbs found to update");
+              //  System.out.println("No orbs found to update");
                 return;
             }
             
             for (Orb orb : orbs) {
-                System.out.println("Processing Orb ID: " + orb.getId());
+              //  System.out.println("Processing Orb ID: " + orb.getId());
                 orb.timeStep();
-                System.out.println("Calling orbFacade.edit() for Orb ID: " + orb.getId());
+              // System.out.println("Calling orbFacade.edit() for Orb ID: " + orb.getId());
                 orbFacade.edit(orb);
-                System.out.println("Successfully saved Orb ID: " + orb.getId());
+               //System.out.println("Successfully saved Orb ID: " + orb.getId()); 
             }
-            System.out.println("=== SCHEDULER COMPLETED ===");
+           // System.out.println("=== SCHEDULER COMPLETED ===");
         } catch (Exception e) {
-            System.out.println("ERROR in scheduler: " + e.getMessage());
+           // System.out.println("ERROR in scheduler: " + e.getMessage());
             e.printStackTrace();
         }
     }

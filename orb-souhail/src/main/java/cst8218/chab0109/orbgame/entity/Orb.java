@@ -129,60 +129,60 @@ public class Orb implements Serializable {
      * Moves the orb and handles bouncing off walls with decay.
      */
     public void timeStep() {
-        System.out.println("  Orb.timeStep() START - ID: " + id + 
-                         ", x: " + x + ", y: " + y + 
-                         ", xSpeed: " + xSpeed + ", ySpeed: " + ySpeed);
-        
+       // System.out.println("  Orb.timeStep() START - ID: " + id + 
+                    //     ", x: " + x + ", y: " + y + 
+                    //     ", xSpeed: " + xSpeed + ", ySpeed: " + ySpeed);
+        //
         // Move the orb
         x += xSpeed;
         y += ySpeed;
-        System.out.println("  After movement - x: " + x + ", y: " + y);
+       // System.out.println("  After movement - x: " + x + ", y: " + y);
 
         // Bounce off left wall
         if (x <= 0 && xSpeed < 0) {
-            System.out.println("  Bouncing off LEFT wall");
+            //System.out.println("  Bouncing off LEFT wall");
             x = 0;
             xSpeed = -xSpeed;  // First reverse direction
             xSpeed = Math.max(0, xSpeed - DECAY_RATE);  // Then apply decay
-            System.out.println("  After left bounce - xSpeed: " + xSpeed);
+            //System.out.println("  After left bounce - xSpeed: " + xSpeed);
         }
 
         // Bounce off top wall
         if (y <= 0 && ySpeed < 0) {
-            System.out.println("  Bouncing off TOP wall");
+           // System.out.println("  Bouncing off TOP wall");
             y = 0;
             ySpeed = -ySpeed;  // First reverse direction  
             ySpeed = Math.max(0, ySpeed - DECAY_RATE);  // Then apply decay
-            System.out.println("  After top bounce - ySpeed: " + ySpeed);
+            //System.out.println("  After top bounce - ySpeed: " + ySpeed);
         }
 
         // Bounce off right wall
         if (x >= X_MAX - size && xSpeed > 0) {
-            System.out.println("  Bouncing off RIGHT wall");
+           // System.out.println("  Bouncing off RIGHT wall");
             x = X_MAX - size;
             xSpeed = -xSpeed;  // First reverse direction
             // For negative speeds, we need to make them less negative
             if (xSpeed < 0) {
                 xSpeed = Math.min(0, xSpeed + DECAY_RATE);
             }
-            System.out.println("  After right bounce - xSpeed: " + xSpeed);
+           // System.out.println("  After right bounce - xSpeed: " + xSpeed);
         }
 
         // Bounce off bottom wall
         if (y >= Y_MAX - size && ySpeed > 0) {
-            System.out.println("  Bouncing off BOTTOM wall");
+            //System.out.println("  Bouncing off BOTTOM wall");
             y = Y_MAX - size;
             ySpeed = -ySpeed;  // First reverse direction
             // For negative speeds, we need to make them less negative
             if (ySpeed < 0) {
                 ySpeed = Math.min(0, ySpeed + DECAY_RATE);
             }
-            System.out.println("  After bottom bounce - ySpeed: " + ySpeed);
+           // System.out.println("  After bottom bounce - ySpeed: " + ySpeed);
         }
         
-        System.out.println("  Orb.timeStep() END - ID: " + id + 
-                         ", x: " + x + ", y: " + y + 
-                         ", xSpeed: " + xSpeed + ", ySpeed: " + ySpeed);
+       // System.out.println("  Orb.timeStep() END - ID: " + id + 
+                 //        ", x: " + x + ", y: " + y + 
+                  //       ", xSpeed: " + xSpeed + ", ySpeed: " + ySpeed);
     }
 
     @Override

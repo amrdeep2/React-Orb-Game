@@ -10,5 +10,6 @@
         <property name="URL" value="jdbc:mysql://localhost:3306/cst8218?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;useSSL=false"/>
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
     </jdbc-connection-pool>
-    <jdbc-resource enabled="true" jndi-name="java:app/mariaDB" object-type="user" pool-name="mysql_cst8218_rootPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/MariaDB" object-type="user" pool-name="mysql_cst8218_rootPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/aaa" object-type="user" pool-name="mysql_cst8218_rootPool"/>
 </resources>
