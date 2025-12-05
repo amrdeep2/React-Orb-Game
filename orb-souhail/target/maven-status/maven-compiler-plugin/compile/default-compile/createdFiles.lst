@@ -17,6 +17,7 @@ cst8218\chab0109\orbgame\business\AdvanceTime.class
 cst8218\chab0109\orbgame\util\JsfCrudELResolver.class
 cst8218\chab0109\orbgame\presentation\exceptions\NonexistentEntityException.class
 cst8218\chab0109\orbgame\exceptions\NonexistentEntityException.class
+cst8218\chab0109\orbgame\resources\CORSFilter.class
 cst8218\chab0109\orbgame\presentation\OrbJpaController.class
 cst8218\chab0109\orbgame\util\JsfCrudELResolver$JsfCrudClass.class
 cst8218\chab0109\orbgame\business\UserAccountController.class
