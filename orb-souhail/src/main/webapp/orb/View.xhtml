@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewOrbTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewOrbLabel_id}"/>
+                    <h:outputText value="#{orbController.selected.id}" title="#{bundle.ViewOrbTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewOrbLabel_x}"/>
+                    <h:outputText value="#{orbController.selected.x}" title="#{bundle.ViewOrbTitle_x}"/>
+                    <h:outputText value="#{bundle.ViewOrbLabel_y}"/>
+                    <h:outputText value="#{orbController.selected.y}" title="#{bundle.ViewOrbTitle_y}"/>
+                    <h:outputText value="#{bundle.ViewOrbLabel_size}"/>
+                    <h:outputText value="#{orbController.selected.size}" title="#{bundle.ViewOrbTitle_size}"/>
+                    <h:outputText value="#{bundle.ViewOrbLabel_XSpeed}"/>
+                    <h:outputText value="#{orbController.selected.XSpeed}" title="#{bundle.ViewOrbTitle_XSpeed}"/>
+                    <h:outputText value="#{bundle.ViewOrbLabel_YSpeed}"/>
+                    <h:outputText value="#{orbController.selected.YSpeed}" title="#{bundle.ViewOrbTitle_YSpeed}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{orbController.destroyAndView}" value="#{bundle.ViewOrbDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewOrbEditLink}"/>
+                <br />
+                <h:commandLink action="#{orbController.prepareCreate}" value="#{bundle.ViewOrbCreateLink}" />
+                <br />
+                <h:commandLink action="#{orbController.prepareList}" value="#{bundle.ViewOrbShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewOrbIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
