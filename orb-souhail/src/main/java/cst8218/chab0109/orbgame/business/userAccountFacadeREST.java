@@ -24,7 +24,7 @@ import java.util.List;
  * @author amard
  */
 @Stateless
-@Path("cst8128.sand0411.user.admin1.useraccount")
+@Path("cst8218.chab0109.orbgame.entity.UserAccount")
 public class userAccountFacadeREST extends AbstractFacade<UserAccount> {
 
     public userAccountFacadeREST() {
