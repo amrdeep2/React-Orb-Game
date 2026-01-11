@@ -5,7 +5,7 @@
     <artifactId>orb-souhail</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>orb-souhail-1.0-SNAPSHOT</name>
+    <name>orb-game-1.0-SNAPSHOT</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
